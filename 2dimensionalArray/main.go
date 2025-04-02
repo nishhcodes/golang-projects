@@ -3,11 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	var twoD [2][3]int
-	for i := 0; i < 2; i++ {
-		for j := 0; j < 3; j++ {
-			twoD[i][j] = i + j;
+
+	names := [...]string{"a", "b", "c", "d", "e", "f"}
+
+	for i := 1; i < len(names); i++ {
+		for j := 1; j < i; j++ {
+			fmt.Print(names[i])
 		}
+		fmt.Println()
 	}
-	fmt.Println(twoD)
+
 }
